@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
 	name='heroku-django-helpers',
-	version='0.2',
+	version='0.3',
 	author='Jack Shedd, Mess',
 	author_email='jshedd@thisismess.com',
 	packages=['heroku_django_helpers',],

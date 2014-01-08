@@ -22,10 +22,10 @@ class SSLRedirect:
 			
 	def _redirect(self, request, secure):
 		protocol = secure and "https" or "http"
-        if use_request_for_host:
-            newurl = "%s://%s%s" % (protocol, request.get_host(), request.get_full_path())
-        else:
-            newurl = "%s://%s%s" % (protocol, get_host(request), request.get_full_path())
+		if use_request_for_host:
+			newurl = "%s://%s%s" % (protocol, request.get_host(), request.get_full_path())
+		else:
+			newurl = "%s://%s%s" % (protocol, get_host(request), request.get_full_path())
 		return HttpResponseRedirect(newurl)
 
 
@@ -38,8 +38,8 @@ class WWWRedirect:
 
 	def _redirect(self, request, secure):
 		protocol = secure and "https" or "http"
-        if use_request_for_host:
-            newurl = "%s://%s.%s%s" % (protocol, 'www', request.get_host(), request.get_full_path())
-        else:
-            newurl = "%s://%s.%s%s" % (protocol, 'www', get_host(request), request.get_full_path())
+		if use_request_for_host:
+			newurl = "%s://%s.%s%s" % (protocol, 'www', request.get_host(), request.get_full_path())
+		else:
+			newurl = "%s://%s.%s%s" % (protocol, 'www', get_host(request), request.get_full_path())
 		return HttpResponseRedirect(newurl)
